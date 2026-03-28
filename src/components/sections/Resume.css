@@ -1,0 +1,362 @@
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.skills-row {
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.resume-row {
+  background: none;
+  border: none;
+  text-align: left;
+  width: 100%;
+  padding: 6px 8px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.15s;
+}
+
+.resume-row:hover {
+  background-color: #f2f2f2;
+}
+
+.resume-category {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text);
+  width: 140px;
+  flex-shrink: 0;
+  padding-top: 4px;
+  text-transform: uppercase;
+  letter-spacing: 0.3px;
+}
+
+.skills-tags {
+  flex: 1;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0;
+}
+
+/* 모달 */
+.resume-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.resume-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 480px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.resume-modal-sticky {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 20px 24px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.resume-modal-body {
+  overflow-y: auto;
+  padding: 20px 24px 24px;
+  flex: 1;
+}
+
+.resume-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 2px;
+}
+
+.resume-modal-close:hover {
+  color: var(--color-text);
+}
+
+.resume-modal-header {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.resume-modal-title {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.resume-modal-detail {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  white-space: pre-line;
+}
+
+.resume-modal-top {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.resume-modal-image {
+  width: 120px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 6px;
+  flex-shrink: 0;
+}
+
+.resume-info-basic {
+  flex: 1;
+}
+
+.resume-info-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+
+.resume-info-table th {
+  text-align: left;
+  color: var(--color-text-muted);
+  font-weight: 500;
+  padding: 4px 12px 4px 0;
+  white-space: nowrap;
+  width: 70px;
+}
+
+.resume-info-table td {
+  color: var(--color-text);
+  padding: 4px 0;
+}
+
+.resume-modal-section {
+  margin-bottom: 20px;
+}
+
+.resume-modal-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 8px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.resume-modal-row {
+  display: flex;
+  gap: 16px;
+  padding: 5px 0;
+  font-size: 14px;
+}
+
+.resume-modal-period {
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  flex-shrink: 0;
+  min-width: 130px;
+}
+
+.resume-modal-content {
+  color: var(--color-text);
+}
+
+.resume-modal--wide {
+  max-width: 720px;
+}
+
+/* 경력기술서 */
+.career-total-exp {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text);
+  margin-bottom: 20px;
+}
+
+.career-entry {
+  margin-bottom: 28px;
+  padding-bottom: 28px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.career-entry:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.career-entry-header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+  gap: 6px 12px;
+  margin-bottom: 12px;
+}
+
+.career-entry-period {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+}
+
+.career-entry-company {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.career-entry-meta {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.career-entry-bullets {
+  padding-left: 18px;
+  margin: 0 0 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.career-entry-bullets li {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.7;
+}
+
+.career-entry-stack {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  margin: 0;
+}
+
+.career-entry-stack strong {
+  color: var(--color-text);
+  font-weight: 600;
+}
+
+/* 자기소개서 */
+.introduction-section {
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  /*border-bottom: 1px solid var(--color-border);*/
+}
+
+.introduction-section:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+.introduction-section-title {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--color-text-muted);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-bottom: 12px;
+  padding-bottom: 4px;
+  border-bottom: 1px solid var(--color-border);
+}
+
+.introduction-bullets {
+  padding-left: 18px;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.introduction-bullets li {
+  font-size: 14px;
+  color: var(--color-text-light);
+  line-height: 1.75;
+}
+
+@media (max-width: 600px) {
+  .skills-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .resume-row {
+    flex-direction: row;
+    align-items: center;
+  }
+
+  .skills-category {
+    width: auto;
+  }
+
+  .resume-modal,
+  .resume-modal--wide {
+    margin: 12px;
+    max-height: 90vh;
+    max-width: calc(100vw - 24px);
+  }
+
+  .resume-modal-sticky {
+    padding: 16px 16px 12px;
+  }
+
+  .resume-modal-body {
+    padding: 16px;
+  }
+
+  .resume-modal-top {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .resume-modal-image {
+    width: 90px;
+    height: 135px;
+  }
+
+  .resume-info-basic {
+    width: 100%;
+  }
+
+  .career-entry-header {
+    flex-direction: column;
+    gap: 2px;
+  }
+
+  .resume-modal-period {
+    min-width: unset;
+  }
+
+  .resume-modal-row {
+    flex-direction: column;
+    gap: 2px;
+  }
+}

@@ -1,0 +1,289 @@
+/* 썸네일 그리드 */
+.experience-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 16px;
+}
+
+.experience-card {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: 20px;
+  border: 1px solid #cccccc;
+  border-radius: 8px;
+  background: none;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.experience-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.experience-card--current {
+  border-color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb, 80, 120, 220), 0.04);
+}
+
+.experience-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+}
+
+.experience-card-badge {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--color-accent);
+  background: rgba(var(--color-accent-rgb, 80, 120, 220), 0.1);
+  padding: 2px 7px;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.experience-card-company {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.experience-card-project {
+  font-size: 15px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.experience-card-role {
+  font-size: 13px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.experience-card-desc {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.experience-card-period {
+  font-size: 12px;
+  color: var(--color-text-muted);
+}
+
+.experience-card-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  margin-top: 8px;
+}
+
+.experience-card-more {
+  font-size: 12px;
+  color: var(--color-text-muted);
+  align-self: center;
+}
+
+/* 모달 */
+.experience-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}
+
+.experience-modal {
+  background: #fff;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 560px;
+  max-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.16);
+  overflow: hidden;
+}
+
+.experience-modal-sticky {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+  padding: 24px 24px 16px;
+  border-bottom: 1px solid var(--color-border);
+  background: #fff;
+  flex-shrink: 0;
+}
+
+.experience-modal-body {
+  overflow-y: auto;
+  padding: 20px 24px 24px;
+  flex: 1;
+}
+
+.experience-modal-close {
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-muted);
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+  padding: 2px;
+}
+
+.experience-modal-close:hover {
+  color: var(--color-text);
+}
+
+.experience-modal-header {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.experience-modal-project {
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--color-accent);
+}
+
+.experience-modal-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+  padding: 10px 14px;
+  background: #f7f7f7;
+  border-radius: 6px;
+}
+
+.experience-modal-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.experience-modal-meta-item .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.experience-modal-company {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--color-text);
+}
+
+.experience-modal-role {
+  font-size: 14px;
+  color: var(--color-text-light);
+  font-weight: 500;
+}
+
+.experience-modal-period {
+  font-size: 13px;
+  color: var(--color-text-muted);
+}
+
+.experience-modal-description {
+  font-size: 14px;
+  color: var(--color-text-muted);
+  margin-bottom: 14px;
+  font-style: italic;
+}
+
+.experience-modal-tasks {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.experience-modal-tasks li {
+  font-size: 14px;
+  color: var(--color-text-light);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.experience-modal-tasks li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+.experience-modal-subtasks {
+  list-style: none;
+  padding: 0;
+  margin-top: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.experience-modal-subtasks li {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  padding-left: 16px;
+  position: relative;
+  line-height: 1.6;
+}
+
+.experience-modal-subtasks li::before {
+  content: "–";
+  position: absolute;
+  left: 0;
+  color: var(--color-text-muted);
+}
+
+.experience-modal-skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+@media (max-width: 600px) {
+  .experience-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .experience-modal {
+    margin: 12px;
+    max-height: 90vh;
+  }
+
+  .experience-modal-sticky {
+    padding: 16px 16px 12px;
+  }
+
+  .experience-modal-body {
+    padding: 16px;
+  }
+
+  .experience-modal-project {
+    font-size: 17px;
+  }
+
+  .experience-modal-meta {
+    flex-direction: column;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 400px) {
+  .experience-grid {
+    grid-template-columns: 1fr;
+  }
+}

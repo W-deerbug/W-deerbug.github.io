@@ -1,0 +1,10 @@
+.about-content p {
+  color: var(--color-text-light);
+  margin-bottom: 12px;
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.about-content p:last-child {
+  margin-bottom: 0;
+}
