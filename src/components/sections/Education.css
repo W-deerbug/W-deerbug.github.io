@@ -1,0 +1,45 @@
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.education-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.education-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 12px;
+}
+
+.education-school {
+  display: block;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--color-text);
+  margin-bottom: 2px;
+}
+
+.education-major {
+  display: block;
+  font-size: 14px;
+  color: var(--color-text-light);
+}
+
+.education-period {
+  font-size: 13px;
+  color: var(--color-text-muted);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+@media (max-width: 600px) {
+  .education-header {
+    flex-direction: column;
+    gap: 4px;
+  }
+}

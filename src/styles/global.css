@@ -1,0 +1,81 @@
+/* ============================================================
+   전역 스타일 - 변수, 리셋, 타이포그래피
+   ============================================================ */
+
+:root {
+  /* 색상 */
+  --color-bg: #ffffff;
+  --color-text: #333333;
+  --color-text-light: #666666;
+  --color-text-muted: #999999;
+  --color-border: #e8e8e8;
+  --color-accent: #5a9e4e;
+  --color-accent-rgb: 90, 158, 78;
+  --color-tag-bg: #eef5ec;
+  --color-tag-text: #3d7a32;
+
+  /* 타이포그래피 */
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-size-base: 15px;
+  --line-height-base: 1.7;
+
+  /* 레이아웃 */
+  --max-width: 800px;
+  --section-gap: 48px;
+  --padding-x: 24px;
+}
+
+/* 리셋 */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  caret-color: transparent;
+}
+
+/* 기본 */
+html {
+  font-size: var(--font-size-base);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: var(--font-sans);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  color: var(--color-text);
+  background-color: var(--color-bg);
+}
+
+a {
+  color: var(--color-accent);
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+ul {
+  list-style: none;
+}
+
+/* 반응형 변수 */
+@media (max-width: 600px) {
+  :root {
+    --section-gap: 36px;
+    --padding-x: 16px;
+    --font-size-base: 14px;
+  }
+}
+
+/* 인쇄 스타일 */
+@media print {
+  :root {
+    --color-accent: #3d7a32;
+  }
+  body {
+    font-size: 12px;
+  }
+}
