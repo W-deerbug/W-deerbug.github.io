@@ -107,7 +107,7 @@ export const profile: Profile = {
       "동료가 읽기 편한 코드를 짜고, 관리가 용이한 인프라를 구축하여 " +
       "비즈니스의 성장을 기술적으로 뒷받침하는 백엔드 직무에 지원합니다.",
   email: "jonghee99@naver.com",
-  github: "deerbugger",
+  github: "https://github.com/W-deerbug",
   location: "강서구, 서울",
   birthdate: "1999.10.25",
   hobbies: "독서, 러닝",
