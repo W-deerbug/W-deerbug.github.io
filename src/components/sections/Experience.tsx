@@ -5,6 +5,24 @@ import SectionTitle from "../ui/SectionTitle";
 import Tag from "../ui/Tag";
 import "./Experience.css";
 
+import erpErdGrant from "../../assets/ERP_ERD_GRANT.png";
+import erpErdTrd from "../../assets/ERP_ERD_TRD.png";
+import pdfEmployee from "../../assets/인트라화면설계서_사원관리.pdf?url";
+import pdfContract from "../../assets/인트라화면설계서_계약관리.pdf?url";
+import pdfSales from "../../assets/인트라화면설계서_매입매출.pdf?url";
+import pdfPermission from "../../assets/인트라화면설계서_권한관리.pdf?url";
+import xlsxApi from "../../assets/출입인증(연동)_API_V1.0.xlsx?url";
+
+const assetMap: Record<string, string> = {
+  "ERP_ERD_GRANT.png": erpErdGrant,
+  "ERP_ERD_TRD.png": erpErdTrd,
+  "인트라화면설계서_사원관리.pdf": pdfEmployee,
+  "인트라화면설계서_계약관리.pdf": pdfContract,
+  "인트라화면설계서_매입매출.pdf": pdfSales,
+  "인트라화면설계서_권한관리.pdf": pdfPermission,
+  "출입인증(연동)_API_V1.0.xlsx": xlsxApi,
+};
+
 export default function Experience() {
   const [selected, setSelected] = useState<ExperienceItem | null>(null);
 
@@ -119,6 +137,55 @@ export default function Experience() {
                   {selected.skills.map((skill) => (
                     <Tag key={skill} label={skill} />
                   ))}
+                </div>
+              )}
+
+              {selected.attachments && selected.attachments.length > 0 && (
+                <div className="experience-modal-attachments">
+                  <p className="experience-modal-section-label">
+                    <span className="material-symbols-outlined">attach_file</span>
+                    산출물
+                  </p>
+                  <div className="attachment-grid">
+                    {selected.attachments.map((att) => {
+                      const url = assetMap[att.filename];
+                      return (
+                        <div key={att.filename} className="attachment-card">
+                          <div className="attachment-card-preview">
+                            {att.type === "image" ? (
+                              <img src={url} alt={att.label} />
+                            ) : att.type === "xlsx" ? (
+                              <span className="material-symbols-outlined attachment-xlsx-icon">table</span>
+                            ) : (
+                              <span className="material-symbols-outlined attachment-pdf-icon">picture_as_pdf</span>
+                            )}
+                          </div>
+                          <span className="attachment-card-label">{att.label}</span>
+                          <div className="attachment-card-actions">
+                            {att.type !== "xlsx" && (
+                              <a
+                                href={url}
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                title="새 탭으로 보기"
+                                onClick={(e) => e.stopPropagation()}
+                              >
+                                <span className="material-symbols-outlined">open_in_new</span>
+                              </a>
+                            )}
+                            <a
+                              href={url}
+                              download={att.filename}
+                              title="다운로드"
+                              onClick={(e) => e.stopPropagation()}
+                            >
+                              <span className="material-symbols-outlined">download</span>
+                            </a>
+                          </div>
+                        </div>
+                      );
+                    })}
+                  </div>
                 </div>
               )}
             </div>
