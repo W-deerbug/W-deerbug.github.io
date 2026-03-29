@@ -254,6 +254,117 @@
   gap: 6px;
 }
 
+/* 산출물 섹션 */
+.experience-modal-attachments {
+  margin-top: 20px;
+  border-top: 1px solid var(--color-border);
+  padding-top: 16px;
+}
+
+.experience-modal-section-label {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--color-text-muted);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.experience-modal-section-label .material-symbols-outlined {
+  font-size: 16px;
+}
+
+.attachment-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.attachment-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  overflow: hidden;
+  background: #fafafa;
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+
+.attachment-card:hover {
+  border-color: var(--color-accent);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.attachment-card-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90px;
+  background: #f0f0f0;
+  overflow: hidden;
+}
+
+.attachment-card-preview img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.attachment-pdf-icon {
+  font-size: 40px;
+  color: #e53935;
+}
+
+.attachment-xlsx-icon {
+  font-size: 40px;
+  color: #1d6f42;
+}
+
+.attachment-card-label {
+  font-size: 11px;
+  color: var(--color-text-light);
+  padding: 6px 8px 4px;
+  line-height: 1.4;
+  flex: 1;
+}
+
+.attachment-card-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 2px;
+  padding: 2px 4px 4px;
+}
+
+.attachment-card-actions a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 4px;
+  color: var(--color-text-muted);
+  text-decoration: none;
+  transition: background 0.12s, color 0.12s;
+}
+
+.attachment-card-actions a:hover {
+  background: rgba(0, 0, 0, 0.06);
+  color: var(--color-accent);
+}
+
+.attachment-card-actions .material-symbols-outlined {
+  font-size: 16px;
+}
+
+@media (max-width: 600px) {
+  .attachment-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 600px) {
   .experience-grid {
     grid-template-columns: 1fr 1fr;

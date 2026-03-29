@@ -25,6 +25,12 @@ export interface TaskItem {
   subItems?: string[];
 }
 
+export interface AttachmentItem {
+  type: 'pdf' | 'image' | 'xlsx';
+  label: string;
+  filename: string;        // src/assets/ 아래 파일명
+}
+
 export interface ExperienceItem {
   company: string;
   projectName?: string;    // 프로젝트/개편명
@@ -35,6 +41,7 @@ export interface ExperienceItem {
   tools?: string;          // 협업 도구
   tasks: TaskItem[];       // 담당 업무 및 성과
   skills?: string[];       // 사용 기술 태그
+  attachments?: AttachmentItem[];  // 첨부 산출물
 }
 
 export interface SkillCategory {
@@ -136,6 +143,14 @@ export const experience: ExperienceItem[] = [
       { text: "프로젝트 결과 공유 및 방향성 정리를 위한 워크샵 발표 진행" },
     ],
     skills: ["Kotlin", "TypeScript", "Vue.js", "GraphQL (DGS)", "Oracle"],
+    attachments: [
+      { type: 'image', label: 'ERD (권한 관리)', filename: 'ERP_ERD_GRANT.png' },
+      { type: 'image', label: 'ERD (TRD)', filename: 'ERP_ERD_TRD.png' },
+      { type: 'pdf', label: '화면설계서 - 사원관리', filename: '인트라화면설계서_사원관리.pdf' },
+      { type: 'pdf', label: '화면설계서 - 계약관리', filename: '인트라화면설계서_계약관리.pdf' },
+      { type: 'pdf', label: '화면설계서 - 매입매출', filename: '인트라화면설계서_매입매출.pdf' },
+      { type: 'pdf', label: '화면설계서 - 권한관리', filename: '인트라화면설계서_권한관리.pdf' },
+    ],
   },
   {
     company: "(주)호디",
@@ -184,6 +199,9 @@ export const experience: ExperienceItem[] = [
 
     ],
     skills: ["Spring", "JPA", "TypeScript", "Angular", "Spring Security", "Oracle"],
+    attachments: [
+      { type: 'xlsx', label: 'API 명세서 - 출입인증(연동)', filename: '출입인증(연동)_API_V1.0.xlsx' },
+    ],
   },
   {
     company: "(주)호디",
