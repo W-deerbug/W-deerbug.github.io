@@ -13,17 +13,17 @@ export default function Header() {
         <p className="header-summary">{profile.summary}</p>
 
         <ul className="header-links">
-            {/*{profile.github && (*/}
-            {/*  <li>*/}
-            {/*    <a*/}
-            {/*      href={`https://github.com/${profile.github}`}*/}
-            {/*      target="_blank"*/}
-            {/*      rel="noreferrer"*/}
-            {/*    >*/}
-            {/*      github.com/{profile.github}*/}
-            {/*    </a>*/}
-            {/*  </li>*/}
-            {/*)}*/}
+            {profile.github && (
+              <li>
+                <a
+                  href={`${profile.github}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {profile.github}
+                </a>
+              </li>
+            )}
             {profile.linkedin && (
               <li>
                 <a
