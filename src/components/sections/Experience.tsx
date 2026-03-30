@@ -6,7 +6,7 @@ import Tag from "../ui/Tag";
 import "./Experience.css";
 
 import erpErdGrant from "../../assets/ERP_ERD_GRANT.png";
-import erpErdTrd from "../../assets/ERP_ERD_TRD.png";
+import erpErdTrd from "../../assets/ERP_ERD.png";
 import pdfEmployee from "../../assets/인트라화면설계서_사원관리.pdf?url";
 import pdfContract from "../../assets/인트라화면설계서_계약관리.pdf?url";
 import pdfSales from "../../assets/인트라화면설계서_매입매출.pdf?url";
@@ -15,7 +15,7 @@ import xlsxApi from "../../assets/출입인증(연동)_API_V1.0.xlsx?url";
 
 const assetMap: Record<string, string> = {
   "ERP_ERD_GRANT.png": erpErdGrant,
-  "ERP_ERD_TRD.png": erpErdTrd,
+  "ERP_ERD.png": erpErdTrd,
   "인트라화면설계서_사원관리.pdf": pdfEmployee,
   "인트라화면설계서_계약관리.pdf": pdfContract,
   "인트라화면설계서_매입매출.pdf": pdfSales,
