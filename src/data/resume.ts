@@ -145,7 +145,7 @@ export const experience: ExperienceItem[] = [
     skills: ["Kotlin", "TypeScript", "Vue.js", "GraphQL (DGS)", "Oracle"],
     attachments: [
       { type: 'image', label: 'ERD (권한 관리)', filename: 'ERP_ERD_GRANT.png' },
-      { type: 'image', label: 'ERD (TRD)', filename: 'ERP_ERD_TRD.png' },
+      { type: 'image', label: 'ERD (매입매출/계약/거래처/사원)', filename: 'ERP_ERD.png' },
       { type: 'pdf', label: '화면설계서 - 사원관리', filename: '인트라화면설계서_사원관리.pdf' },
       { type: 'pdf', label: '화면설계서 - 계약관리', filename: '인트라화면설계서_계약관리.pdf' },
       { type: 'pdf', label: '화면설계서 - 매입매출', filename: '인트라화면설계서_매입매출.pdf' },
