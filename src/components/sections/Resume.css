@@ -254,14 +254,18 @@
 }
 
 .career-entry-stack {
-  font-size: 13px;
-  color: var(--color-text-muted);
-  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  padding-left: 18px;
+  align-items: center;
 }
 
-.career-entry-stack strong {
+.career-entry-stack-label {
+  font-size: 13px;
   color: var(--color-text);
   font-weight: 600;
+  margin-right: 2px;
 }
 
 /* 자기소개서 */

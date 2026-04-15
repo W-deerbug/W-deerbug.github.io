@@ -193,12 +193,14 @@
   color: var(--color-text-muted);
 }
 
+/*
 .experience-modal-description {
   font-size: 14px;
   color: var(--color-text-muted);
   margin-bottom: 14px;
   font-style: italic;
 }
+*/
 
 .experience-modal-tasks {
   list-style: none;

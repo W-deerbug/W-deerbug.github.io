@@ -54,7 +54,7 @@ export default function Experience() {
               )}
             </div>
             <span className="experience-card-role">
-              {item.company}, {item.role}
+              {item.company}, {item.pos}
             </span>
             {item.description && (
               <span className="experience-card-desc">{item.description}</span>
@@ -86,7 +86,7 @@ export default function Experience() {
                   <span className="experience-modal-project">{selected.projectName}</span>
                 )}
                 <span className="experience-modal-role">
-                  {selected.company}, {selected.role}
+                  {selected.company}, {selected.pos}, {selected.description}
                 </span>
                 <span className="experience-modal-period">{selected.period}</span>
               </div>
@@ -113,9 +113,7 @@ export default function Experience() {
                 </div>
               )}
 
-              {selected.description && (
-                <p className="experience-modal-description">{selected.description}</p>
-              )}
+
 
               <ul className="experience-modal-tasks">
                 {selected.tasks.map((task, j) => (

@@ -24,5 +24,7 @@ dist-ssr
 *.sw?
 
 CLAUDE.md
+codex.md
 .claude
+.codex
 

@@ -9,4 +9,10 @@ export default defineConfig({
   plugins: [react()],
   // base: '/test/',
   base: '/',
+  server: {
+    watch: {
+      usePolling: true,
+      interval: 100,
+    },
+  },
 })

@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { resumeItems, profile, education, training } from "../../data/resume";
 import type { ResumeCategory, CareerDetail, IntroductionDetail } from "../../data/resume";
 import SectionTitle from "../ui/SectionTitle";
+import Tag from "../ui/Tag";
 // import profileImg from "../../assets/profile.jpg";
 import "./Resume.css";
 
@@ -102,14 +103,19 @@ function CareerModalContent({ careerDetail }: { careerDetail: CareerDetail }) {
           <div className="career-entry-header">
             <span className="career-entry-period">{entry.period}</span>
             <span className="career-entry-company">{entry.company}</span>
-            <span className="career-entry-meta">{entry.role} · {entry.duration}</span>
+            <span className="career-entry-meta">{entry.pos} · {entry.duration}</span>
           </div>
           <ul className="career-entry-bullets">
             {entry.bullets.map((bullet, j) => (
               <li key={j}>{bullet}</li>
             ))}
           </ul>
-          <p className="career-entry-stack"><strong>Tech Stack:</strong> {entry.stack}</p>
+          <div className="career-entry-stack">
+            <span className="career-entry-stack-label">Tech Stack:</span>
+            {entry.stack.split(",").map((stackItem) => (
+              <Tag key={`${entry.company}-${stackItem.trim()}`} label={stackItem.trim()} />
+            ))}
+          </div>
         </div>
       ))}
     </div>

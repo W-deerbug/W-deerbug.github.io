@@ -2,7 +2,8 @@ import "./styles/global.css";
 import "./App.css";
 
 import Header from "./components/sections/Header";
-import Experience from "./components/sections/Experience";
+// import Experience from "./components/sections/Experience";
+import ModalPatternShowcase from "./components/sections/ModalPatternShowcase";
 import Resume from "./components/sections/Resume.tsx";
 
 function App() {
@@ -11,7 +12,8 @@ function App() {
       <div className="top-bar" />
       <main className="container" >
         <Header />
-        <Experience />
+        {/* <Experience /> */}
+        <ModalPatternShowcase />
         <Resume />
       </main>
     </div>
